@@ -1,0 +1,141 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/diego/code/heap-core/src/heap_core/workflows/entities/trip_advisor/get_client_and_competitor_urls/deployment/" . "staging/")
+ ("/home/diego/code/heap-core/src/heap_core/workflows/entities/trip_advisor/get_client_and_competitor_urls/" . "deployment/")
+ ("/home/diego/code/heap-core/src/heap_core/workflows/entities/trip_advisor/" . "get_client_and_competitor_urls/")
+ ("/home/diego/code/heap-core/src/heap_core/workflows/entities/" . "trip_advisor/")
+ ("/home/diego/code/heap-core/src/heap_core/workflows/" . "entities/")
+ ("/home/diego/code/heap-core/src/heap_core/" . "workflows/")
+ ("/home/diego/code/heap-core/src/" . "heap_core/")
+ ("/home/diego/code/heap-core/deployment/k8s/overlays/" . "pipelines/")
+ ("/home/diego/code/heap-core/deployment/k8s/" . "overlays/")
+ ("/home/diego/code/heap-core/deployment/" . "k8s/")
+ ("/home/diego/code/heap-core/doc/trip-advisor-get-hotel-reviews/" . "k8s/")
+ ("/home/diego/code/heap-core/doc/trip-advisor-get-static-data/" . "k8s/")
+ ("/home/diego/code/heap-core/doc/" . "trip-advisor-get-hotel-reviews/")
+ ("/home/diego/code/heap-core/" . "dev/")
+ ("/home/diego/code/heap-core/src/heap_core/functionality/" . "trip_advisor_get_reviews/")
+ ("/home/diego/code/" . "processor/")
+ ("/home/diego/" . "Notes/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/diego/code/heap-core/deployment/tools/deployment_scripts/"
+ "/home/diego/code/heap-core/"
+ "/home/diego/code/heap-core/dev/"
+ "/home/diego/code/heap-core/src/heap_core/workflows/entities/trip_advisor/get_client_and_competitor_urls/deployment/staging/"
+ "/home/diego/code/heap-core/doc/trip-advisor-get-client-and-competitor-hotel-urls/k8s2/staging/"
+ "/home/diego/code/heap-core/deployment/k8s/overlays/pipelines/"
+ "/home/diego/code/heap-core/deployment/deployment_scripts/"
+ "/home/diego/code/heap-core/deployment/scripts/"
+ "/home/diego/code/heap-core/deployment/k8s/overlays/cronjobs/"
+ "/home/diego/code/heap-core/deployment/k8s/cronjob/"
+ "/home/diego/sc/overtone/nanc-in-a-can/src/nanc_in_a_can/"
+ "/home/diego/code/processor/"
+ "/home/diego/code/heap-core/src/heap_core/functionality/trip_advisor_get_reviews/"
+ "/home/diego/Notes/"
+ "/home/diego/code/heap-core/doc/trip-advisor-get-hotel-reviews/k8s/"
+ "/home/diego/Desktop/"
+ "/home/diego/code/heap-core/doc/trip-advisor-get-static-data/k8s/"
+ "/home/diego/code/bcv/heap-core/dev/"
+ "/home/diego/code/heap-core/src/heap_core/functionality/trip_advisor_get_client_and_competitor_urls/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "specs.clj"
+ "profiles.clj"
+ "manual-insert-region-urls.clj"
+ "project.clj"
+ "secret.env"
+ "kustomization.yaml"
+ "common.clj"
+ "docker-build-and-deploy.clj"
+ "cronjob.yaml"
+ ".#sequencing-2.clj"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/diego/code/heap-core/deployment/tools/deployment_scripts/" (23992 53979 434002 142000) "common.clj" "../" "configure.clj" "docker_build_and_push.clj" "./" "deploy.clj")
+
+ ("/home/diego/code/heap-core/" (23987 20427 747960 570000) "deployments/" "profiles.clj" ".joker" "checkouts/" ".gitignore" ".lein-env" "../" "doc/" "./" "project.clj" "deployment/" "dev/" "scripts/" ".git/" ".dockerignore" ".lein-repl-history" "deploy/" "src/" "README.md" "target/")
+
+ ("/home/diego/code/heap-core/dev/" (23985 1399 455596 576000) "freesound.clj" "sql/" "pain-points.md" "../" "./" "statistics.clj" "instagram-media-data.clj" "experiments.clj" "user.clj")
+
+ ("/home/diego/code/heap-core/src/heap_core/functionality/trip_advisor_get_urls/" (23985 5135 177072 836000) ".#v1.clj" "v1.clj" "../" "./")
+
+ ("/home/diego/code/heap-core/src/heap_core/" (23981 60903 760832 967000) "admin.clj" "jupiterx/" "workflows/" "instagram_graph/" "../" "task_request/" "commands/" "standard.clj" "./" "spec_helpers.clj" "functionality/" "inbox.clj" "activesocial/" "command/")
+
+ ("/home/diego/code/heap-core/src/heap_core/functionality/" (23981 60903 759832 999000) "test/" "heap_authenticate_command.clj" "inbox_split_and_thread_instagram_graph_message.clj" "heap_log_event.clj" "ig_get_username/" "ig_story_insights/" "heap_unpack_and_route_command_result/" "automatic_contact_update_using_fullcontact_v1.clj" "instagram_media_insights/" "jupiterx_format_message.clj" "twitter_friends_followers/" "inbox_assoc_bcv_can_reply_instagram_graph_media.clj" "trip_advisor_get_reviews/" "analytics_instagram_media_web_snapshot/" "ig_hash_tags.clj" "aws_rekognition_media_metadata/" "inbox_instagram_locations_via_web.clj" "trip_advisor_get_urls/" "analytics_v2/" "heap_send_unauthenticated_command.clj" "example_deployment.clj" "heap_log_aborted_event.clj" "metadata_assoc_postgresql_query_data.clj" "analytics_instagram_media_web_snapshot.clj" "trip_advisor_get_static_data/" "ig_photo_tags/" "analytics_write_metric_log.clj" "inbox_assoc_bcv_native_action_required_instagram_graph_media.clj" "benchmark/" "inbox_instagram_locations_via_web/" "trip_advisor_get_client_and_competitor_urls/" "profile_photos_processing/" "heap_command_retry/" "example_deployment_03.clj" "heap_unpack_and_route_command_result.clj" "ig_mentions_pipeline/" "analytics_story_metadata.clj" "inbox_add_message_types_instagram_graph_media.clj" "jupiterx_persist_message.clj" "../" "./")
+
+ ("/home/diego/code/heap-core/src/heap_core/functionality/trip_advisor_get_reviews/" (23983 11865 471435 685000) "v1.clj" "../" "s3_consumer.clj" "./")
+
+ ("/home/diego/code/heap-core/src/heap_core/workflows/entities/trip_advisor/get_client_and_competitor_urls/deployment/staging/" (23981 58115 105770 233000) ".gitignore" "../" "secret.example.env" "./" "kustomization.yaml" "secret.env" "config.env")
+
+ ("/home/diego/code/heap-core/src/heap_core/workflows/entities/trip_advisor/get_client_and_competitor_urls/deployment/" (23981 58075 487518 929000) "configuration.clj" "../" "./" "staging/" "bases/" "production/")
+
+ ("/home/diego/code/heap-core/doc/trip-advisor-get-client-and-competitor-hotel-urls/" (23967 11655 27390 88000) "Dockerfile" "k8s/" "../" "k8s2/" "docker-compose.yml" "monitoring.md" "Dockerfile.compose" "job.get-competitors.Dockerfile" "./" "job.get-clients.Dockerfile" "readme.md" "scripts/" "emergency-instructions.md")
+
+ ("/home/diego/code/heap-core/doc/trip-advisor-get-client-and-competitor-hotel-urls/k8s2/" (23967 47588 195894 62000) "deployments/" "../" "./" "staging/")
+
+ ("/home/diego/code/heap-core/doc/trip-advisor-get-client-and-competitor-hotel-urls/k8s2/staging/" (23967 47570 851488 344000) ".gitignore" "../" "secret.example.env" "./" "kustomization.yaml" "secret.env" "config.env")
+
+ ("/home/diego/code/heap-core/src/" (23981 54996 598196 666000) "../" "heap_core/" "./")
+
+ ("/home/diego/code/heap-core/src/heap_core/workflows/entities/trip_advisor/get_client_and_competitor_urls/" (23981 57069 701784 892000) "../" "core.clj" "./" "deployment/")
+
+ ("/home/diego/code/heap-core/deployment/deployment_scripts/" (23981 56457 994475 846000) "common.clj" "../" "configure.clj" "docker_build_and_push.clj" "./" ".#deploy.clj" "deploy.clj")
+
+ ("/home/diego/code/heap-core/deployment/k8s/overlays/pipelines/" (23973 4548 811095 101000) "../" "./" "kustomization.yaml")
+
+ ("/home/diego/code/heap-core/src/heap_core/workflows/" (23975 24127 808463 810000) "test/" "../" "./" "common/" "example/" "entities/")
+
+ ("/home/diego/code/heap-core/src/heap_core/workflows/entities/" (23973 18556 134846 468000) "../" "./" "trip_advisor/")
+
+ ("/home/diego/code/heap-core/src/heap_core/workflows/entities/trip_advisor/" (23974 43930 573459 311000) "get_client_and_competitor_urls/" "../" "./")
+
+ ("/home/diego/code/heap-core/deployment/" (23975 20750 92992 399000) "k8s/" "../" "./" "deployment_scripts/" "docker/")
+
+ ("/home/diego/code/heap-core/deployment/scripts/" (23975 17641 251631 782000) "../" "init_deployment.clj" "docker-build-and-deploy.clj" "./" "deploy.clj")
+
+ ("/home/diego/" (23975 17406 584376 817000) ".zshrc" ".lein/" ".thunderbird/" ".gtkrc-xfce" ".linuxmint/" "test2.json.gz" ".sudo_as_admin_successful" ".gnupg/" ".kube/" ".docker/" ".vscode/" ".xsession-errors.old" ".node_repl_history" ".npm/" ".swt/" ".xinputrc" ".emacs.d/" ".gtkrc-2.0" ".xsession-errors" "Apps/" "Videos/" "Desktop/" ".batteryPercentage" "Music/" ".eclipse/" ".nvm/" ".config/" ".Private/" ".aws/" ".log/" "Datos/" ".pki/" ".batteryState" ".git-prompt.sh" ".bash_logout" ".java/" "sc/" "Notes/" ".zcompdump-diego-ThinkPad-T590-5.4.2" ".pylint.d/" "code/" ".oh-my-zsh/" ".gitconfig" "init.el" ".nv/" ".local/" ".jackdrc" ".python_history" ".m2/" ".nvidia-settings-rc" "pgadmin.log" ".icons/" ".emacs.d.pre-prelude.tar" ".visualvm/" ".Upwork/" ".netrc" "nano.save" ".cinnamon/" ".bashrc" ".DS_Store" ".jack3rc/" ".Xauthority" "Public/" ".pgadmin_histoqueries" ".pgadmin3" "Documents/" ".ecryptfs/" ".git-completion.bash" "Templates/" ".themes/" ".mozilla/" ".gconf/" ".bash_history" ".ICEauthority" ".quokka/" "wp/" ".profile" ".pgpass" "Poemas/" ".zsh_history" "Pictures/" ".ssh/" ".zshrc.pre-oh-my-zsh" ".var/" ".cache/" ".overtone/" ".zcompdump" "bin/" "Downloads/" "../" "./")
+
+ ("/home/diego/code/" (23970 2262 564387 652000) "../" "bedu/" "./" "heap-core/" "tapioca/" "christopher-luna-mega/" "heap-stage/" "processor/")
+
+ ("/home/diego/code/heap-core/deployment/k8s/overlays/cronjobs/" (23974 22518 524865 431000) "../" "./" "kustomization.yaml" "patches/")
+
+ ("/home/diego/sc/overtone/nanc-in-a-can/src/nanc_in_a_can/" (23974 28517 931963 515000) "dynacan.clj" "nanokontrol.clj" "../" "core.clj" "./" ".#sequencing.clj" ".#sequencing-2.clj" "sequencing.clj" ".#dynacan.clj" "una-semana-de-bondad.clj")
+
+ ("/home/diego/code/heap-core/deployment/k8s/overlays/" (23973 65431 212691 898000) "deployments/" "environment/" "../" "rabbitmq/" "./" "cronjobs/" "pipelines/" "README.md" "heap-stage/")
+
+ ("/home/diego/code/heap-core/deployment/k8s/cronjob/" (23972 46844 666491 590000) "../" "./" "kustomization.yaml" "cronjob.yaml")
+
+ ("/home/diego/code/heap-core/deployment/k8s/" (23973 2445 308128 925000) "cronjob/" "overlays/" "../" "rabbitmq/" "./" "pipelines/" "README.md" "heap-stage/")
+
+ ("/home/diego/code/heap-core/deployment/docker/" (23972 46565 998904 10000) "new.Dockerfile" "../" "job.Dockerfile" "./" "runtime.Dockerfile")
+
+ ("/home/diego/code/processor/" (23945 22613 918427 181000) "test/" ".joker" ".gitignore" "../" "install-clojure.md" "doc/" "./" "deps.edn" "project.clj" "readme.md" ".git/" "src/")
+
+ ("/home/diego/Notes/" (23956 2044 936861 405000) "trip-advisor-main-regions.txt" "../" "ta-bepin-error.txt" "./")
+
+ ("/home/diego/code/heap-core/doc/trip-advisor-get-hotel-reviews/k8s/" (23954 39613 969855 3000) "secret.yaml" "rabbitmq.yaml" "configmap-staging.yaml" "deploy-model.yaml" "rabbitmq_.yaml" "cronjob-get-inputs-model.yaml" "../" "cronjob-clients-get-inputs.yaml" "configmap-prod.yaml" "secret-prod.yaml" "./" "deploy.yaml" "cronjob-new-urls-get-inputs.yaml" "cronjob-competitors-get-inputs.yaml" "cronjob-competitors-get-inputs-model.yaml" "cronjob-new-urls-get-inputs-model.yaml" "secret-staging.yaml" "cronjob-get-inputs.yaml" "cronjob-clients-get-inputs-model.yaml")
+
+ ("/home/diego/code/heap-core/doc/trip-advisor-get-hotel-reviews/" (23954 39613 969855 3000) "job.clients-get-inputs.Dockerfile" "Dockerfile" ".gitignore" "k8s/" "../" "job.new-urls-get-inputs.Dockerfile" "docker-compose.yml" "job.competitors-get-inputs.Dockerfile" "monitoring.md" "Dockerfile.compose" "job.get-inputs.Dockerfile" "./" "readme.md" "scripts/" "emergency-instructions.md")
+
+ ("/home/diego/code/heap-core/doc/" (23954 39613 975855 65000) "aws-rekognition-media-metadata/" "trip-advisor-get-hotel-reviews/" "trip-advisor-get-static-data/" "instagram-page-snapshot/" "instagram-post-snapshot/" "inbox-instagram-usernames-via-web/" "facebook-page-insights/" "twitter-page-snapshot/" "../" "facebook-post-insights/" "facebook-post-snapshot/" "rabbitmq/" "ig-photo-tags/" "trip-advisor-get-client-and-competitor-hotel-urls/" "facebook-page-snapshot/" "./" "common/" "trip-advisor-get-urls/" "readme-images/" "twitter-friends-followers/" "instagram-media-insights/" "JXMESSAGEFLOW.md" "twitter-post-snapshot/" "profile-photos-processing/" "facebook-page-multipart-lifetime-insights/" "facebook-page-multipart-insights/" "inbox-instagram-locations-via-web/" "ig-story-metadata/" "ig-hash-tags/" "analytics-instagram-media-web-snapshot/" "monitoring/" "ig-story-insights/" "ig-mentions-pipeline/")
+
+ ("/home/diego/Desktop/" (23954 36045 41661 297000) ".#trip-advisor-main-regions.txt" "../" "./")
+
+ ("/home/diego/code/heap-core/doc/trip-advisor-get-static-data/k8s/" (23953 11787 119149 615000) "secret.yaml" "rabbitmq.yaml" "configmap-staging.yaml" "cronjob-all-others.yaml" "deploy-model.yaml" "cronjob-competitors.yaml" "../" "cronjob-all-others-model.yaml" "configmap-prod.yaml" "./" ".#configmap-prod.yaml" "deploy.yaml" "cronjob-clients-model.yaml" "cronjob-usa-india-model.yaml" "cronjob-usa-india.yaml" "cronjob-competitors-model.yaml" "cronjob-clients.yaml")
+
+ ("/home/diego/code/heap-core/doc/trip-advisor-get-static-data/" (23945 23290 765521 957000) "Dockerfile" ".gitignore" "k8s/" "../" "docker-compose.yml" "monitoring.md" "job.get-all-other-entities-urls.Dockerfile" "Dockerfile.compose" "job.get-inputs.Dockerfile" "./" "job.get-competitor-urls.Dockerfile" "readme.md" "scripts/" "job.get-client-urls.Dockerfile" "emergency-instructions.md" "job.get-usa-and-india-urls.Dockerfile")
+
+ ("/home/diego/code/heap-core/src/heap_core/functionality/trip_advisor_get_client_and_competitor_urls/" (23945 23290 768522 163000) "v1.clj" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

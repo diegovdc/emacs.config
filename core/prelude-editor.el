@@ -149,10 +149,10 @@
 
 ;; automatically save buffers associated with files on buffer switch
 ;; and on windows switch
-(require 'super-save)
+;(require 'super-save)
 ;; add integration with ace-window
-(add-to-list 'super-save-triggers 'ace-window)
-(super-save-mode +1)
+;(add-to-list 'super-save-triggers 'ace-window)
+;(super-save-mode +1)
 
 (defadvice set-buffer-major-mode (after set-major-mode activate compile)
   "Set buffer major mode according to `auto-mode-alist'."
@@ -376,7 +376,7 @@ indent yanked text (with prefix arg don't indent)."
 
 ;; easy-kill
 (global-set-key [remap kill-ring-save] 'easy-kill)
-(global-set-key [remap mark-sexp] 'easy-mark)
+;(global-set-key [remap mark-sexp] 'easy-mark)
 
 ;; operate-on-number
 (require 'operate-on-number)
