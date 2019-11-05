@@ -2,6 +2,7 @@
 *.elc
 auto-save-list
 recentf
+.recentf
 savehist
 saveplace
 eshell
@@ -26,3 +27,4 @@ network-security.data
 prelude-cheatsheet.el
 prelude-cheatsheet.aux
 prelude-cheatsheet.log
+ido.last

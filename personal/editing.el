@@ -1,5 +1,8 @@
 ;; Customizations relating to editing a buffer.
 
+(require 'lispy)
+(add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1)))
+
 ;; Key binding to use "hippie expand" for text autocompletion
 ;; http://www.emacswiki.org/emacs/HippieExpand
 (global-set-key (kbd "M-/") 'hippie-expand)

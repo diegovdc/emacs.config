@@ -5,8 +5,6 @@
 
 ;; Enable paredit for Clojure
 (add-hook 'clojure-mode-hook 'enable-paredit-mode)
-;; Enable linting
-(add-hook 'clojure-mode-hook 'flycheck-mode)
 
 ;; This is useful for working with camel-case tokens, like names of
 ;; Java classes (e.g. JavaClassName)
@@ -39,9 +37,8 @@
             (define-clojure-indent (facts 1))
             (rainbow-delimiters-mode)))
 
-
 ;; use C-c to eval inside comment
-(setq clojure-toplevel-inside-comment-form t)
+;(setq clojure-toplevel-inside-comment-form t)
 
 (defun cider-clear-repl-buffer* ()
   (interactive)

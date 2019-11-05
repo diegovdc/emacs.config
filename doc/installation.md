@@ -89,7 +89,7 @@ By default most of the modules that ship with Prelude are not loaded. For more i
 ;;; Uncomment the modules you'd like to use and restart Prelude afterwards
 
 (require 'prelude-c)
-;; (require 'prelude-clojure)
+(require 'prelude-clojure)
 ;; (require 'prelude-coffee)
 ;; (require 'prelude-common-lisp)
 ;; (require 'prelude-css)
@@ -107,9 +107,10 @@ By default most of the modules that ship with Prelude are not loaded. For more i
 ;; (require 'prelude-ruby)
 ;; (require 'prelude-scala)
 (require 'prelude-scheme)
-;; (require 'prelude-scss)
-;; (require 'prelude-web)
+(require 'prelude-scss)
+(require 'prelude-web)
 (require 'prelude-xml)
+(require 'prelude-key-chord)
 ```
 
 You'll need to adjust your `prelude-modules.el` file once the installation is done.
