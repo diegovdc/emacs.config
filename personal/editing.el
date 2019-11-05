@@ -1,7 +1,12 @@
 ;; Customizations relating to editing a buffer.
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
 
 (require 'lispy)
 (add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1)))
+
+;; disable eshell keybinding
+(global-set-key (kbd "C-x m") nil)
 
 ;; Key binding to use "hippie expand" for text autocompletion
 ;; http://www.emacswiki.org/emacs/HippieExpand
@@ -75,9 +80,11 @@
 ;; autocompletion
 (add-hook 'cider-repl-mode-hook #'company-mode)
 (add-hook 'cider-mode-hook #'company-mode)
+(define-key company-active-map (kbd "C-s") 'company-select-next)
+(define-key company-active-map (kbd "C-r") 'company-select-previous)
 
 ;;(setq company-idle-delay nil) ; never start completions automatically
-;;(global-set-key (kbd "M-TAB") #'company-complete) ; use M-TAB, a.k.a. C-M-i, as manual trigger
+(global-set-key (kbd "M-TAB") #'company-complete) ; use M-TAB, a.k.a. C-M-i, as manual trigger
 
 (add-hook 'cider-repl-mode-hook #'cider-company-enable-fuzzy-completion)
 (add-hook 'cider-mode-hook #'cider-company-enable-fuzzy-completion)
