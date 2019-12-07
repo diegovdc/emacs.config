@@ -118,6 +118,8 @@ This is DEPRECATED, use %s instead." prelude-modules-file))
 (require 'prelude-editor)
 (require 'prelude-global-keybindings)
 (require 'prelude-key-chord)
+(require 'prelude-js)
+(require 'prelude-helm) ;; Interface for narrowing and search
 
 ;; macOS specific settings
 (when (eq system-type 'darwin)

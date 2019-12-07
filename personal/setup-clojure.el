@@ -4,7 +4,11 @@
 (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
 
 ;; Enable paredit for Clojure
-(add-hook 'clojure-mode-hook 'enable-paredit-mode)
+
+(add-hook 'clojure-mode-hook
+          (lambda ()
+            (enable-paredit-mode)
+            (lispy-mode 1)))
 
 ;; This is useful for working with camel-case tokens, like names of
 ;; Java classes (e.g. JavaClassName)
@@ -38,7 +42,7 @@
             (rainbow-delimiters-mode)))
 
 ;; use C-c to eval inside comment
-;(setq clojure-toplevel-inside-comment-form t)
+(setq clojure-toplevel-inside-comment-form t)
 
 (defun cider-clear-repl-buffer* ()
   (interactive)
@@ -62,6 +66,7 @@
 ;; When there's a cider error, show its buffer and switch to it
 (setq cider-show-error-buffer t)
 (setq cider-auto-select-error-buffer nil)
+(setq cider-auto-select-test-report-buffer nil)
 
 ;; Where to store the cider history.
 (setq cider-repl-history-file "~/.emacs.d/cider-history")
@@ -101,12 +106,13 @@
 
 (eval-after-load 'cider
   '(progn
-     (define-key clojure-mode-map (kbd "s-<return>")  'cider-eval-defun-at-point) 
+     (define-key clojure-mode-map (kbd "s-<return>")  'cider-eval-defun-at-point)
      (define-key clojure-mode-map (kbd "C-c C-v") 'cider-start-http-server)
      (define-key clojure-mode-map (kbd "C-M-r") 'cider-refresh)
      (define-key clojure-mode-map (kbd "C-c u") 'cider-user-ns)
      (define-key clojure-mode-map (kbd "C-c C-r") 'cider-clear-repl-buffer*)
-     (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)))
+     (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)
+     (define-key clojure-mode-map (kbd "M-.") 'cider-find-var)))
 
 
 (dolist (mode '(clojure-mode clojurescript-mode cider-mode))
@@ -124,3 +130,27 @@
              (0 (progn (compose-region (match-beginning 1)
                                        (match-end 1) "∈")
                        nil)))))))
+
+
+
+;; clj-refactor
+(require 'clj-refactor)
+
+(defun setup-clj-refactor ()
+  (clj-refactor-mode 1)
+  (yas-minor-mode 1) ; for adding require/use/import statements
+  ;; This choice of keybinding leaves cider-macroexpand-1 unbound
+  (cljr-add-keybindings-with-prefix "C-c C-m"))
+
+(add-hook 'clojure-mode-hook #'setup-clj-refactor)
+
+
+;; don't kill the REPL when printing large data structures
+(setq cider-print-options
+      '(("length" 80)
+        ("level" 20)
+        ("right-margin" 80)))
+
+
+(require 'cider-eval-sexp-fu)
+(setq eval-sexp-fu-flash-duration 1)

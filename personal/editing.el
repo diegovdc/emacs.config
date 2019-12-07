@@ -2,8 +2,17 @@
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 
+;; lispy
+(require 'paredit)
 (require 'lispy)
-(add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1)))
+(add-hook 'emacs-lisp-mode-hook
+          (lambda ()
+            (enable-paredit-mode)
+            (lispy-mode 1)
+            (lispy-define-key lispy-mode-map "C-a" 'crux-move-beginning-of-line)
+            (define-key lispy-mode-map (kbd "C-a") 'crux-move-beginning-of-line)
+            (setq lispy-colon-p nil)))
+;; no space before :
 
 ;; disable eshell keybinding
 (global-set-key (kbd "C-x m") nil)
@@ -49,8 +58,9 @@
 ;; http://www.gnu.org/software/emacs/manual/html_node/elisp/Backup-Files.html
 (setq backup-directory-alist `(("." . ,(concat user-emacs-directory
                                                "backups"))))
-(setq auto-save-default nil)
+(setq auto-save-default t)
 
+(setq auto-save-interval 50)
 
 ;; comments
 (defun toggle-comment-on-line ()
@@ -61,7 +71,7 @@
 
 ;; use 2 spaces for tabs
 (defun die-tabs ()
-  (interactive)
+   (interactive)
   (set-variable 'tab-width 2)
   (mark-whole-buffer)
   (untabify (region-beginning) (region-end))
@@ -99,8 +109,11 @@
 ;; switch buffer
 (global-set-key (kbd "s-b") 'ido-switch-buffer)
 
+;; paredit
+(require 'paredit)
+(define-key paredit-mode-map (kbd "C-}") 'paredit-forward-slurp-sexp)
+(define-key paredit-mode-map (kbd "C-{") 'paredit-forward-barf-sexp)
 
-;; duplicate line o region
 
 (defun duplicate-line-or-region (&optional n)
   "Duplicate current line, or region if active.
@@ -109,17 +122,17 @@ With negative N, comment out original line and use the absolute value."
   (interactive "*p")
   (let ((use-region (use-region-p)))
     (save-excursion
-      (let ((text (if use-region        ;Get region if active, otherwise line
+      (let ((text (if use-region ;Get region if active, otherwise line
                       (buffer-substring (region-beginning) (region-end))
                     (prog1 (thing-at-point 'line)
                       (end-of-line)
                       (if (< 0 (forward-line 1)) ;Go to beginning of next line, or make a new one
                           (newline))))))
-        (dotimes (i (abs (or n 1)))     ;Insert N times, or once if not specified
+        (dotimes (i (abs (or n 1))) ;Insert N times, or once if not specified
           (insert text))))
-    (if use-region nil                  ;Only if we're working with a line (not a region)
+    (if use-region nil ;Only if we're working with a line (not a region)
       (let ((pos (- (point) (line-beginning-position)))) ;Save column
-        (if (> 0 n)                             ;Comment out original with negative arg
+        (if (> 0 n)            ;Comment out original with negative arg
             (comment-region (line-beginning-position) (line-end-position)))
         (forward-line 1)
         (forward-char pos)))))
@@ -233,17 +246,25 @@ With negative N, comment out original line and use the absolute value."
 
 (progn
   ;; define set of key sequences
-  (define-prefix-command 'my-leader-key-map)  
+  (define-prefix-command 'my-leader-key-map)
   (define-key my-leader-key-map (kbd "RET") 'eval-last-sexp)
   (define-key my-leader-key-map (kbd "c") 'easy-kill)
   (define-key my-leader-key-map (kbd "v") 'yank)
   (define-key my-leader-key-map (kbd "a") 'crux-move-beginning-of-line)
   (define-key my-leader-key-map (kbd "e") 'move-end-of-line)
   (define-key my-leader-key-map (kbd "SPC") 'easy-mark))
-  
+
+
+(progn
+  ;; define set of key sequences
+  (define-prefix-command 'print-keymap)
+  (define-key print-keymap (kbd "[") 'lispy-backward)
+  (define-key print-keymap (kbd "]") 'lispy-forward))
+
 
 ;; make the menu key as leader key
 (global-set-key (kbd "<XF86WakeUp>") 'my-leader-key-map)
+(global-set-key (kbd "<print>") 'print-keymap)
 
 (global-set-key (kbd "C-M-SPC") 'mark-sexp)
 (global-set-key (kbd "C-x C-c") 'easy-kill)
@@ -254,3 +275,9 @@ With negative N, comment out original line and use the absolute value."
 ;; resize buffers horizontally
 (global-set-key (kbd "<kp-add>") 'enlarge-window-horizontally)
 (global-set-key (kbd "<kp-subtract>") 'shrink-window-horizontally)
+
+;;; backward delete
+(global-set-key (kbd "C-r") 'paredit-backward-delete)
+
+;; move to start of line
+(global-set-key (kbd "C-a") 'crux-move-beginning-of-line)
