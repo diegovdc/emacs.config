@@ -4,8 +4,11 @@
 (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
 
 ;; Enable paredit for Clojure
-
 (add-hook 'clojure-mode-hook
+          (lambda ()
+            (enable-paredit-mode)
+            (lispy-mode 1)))
+(add-hook 'cider-repl-mode
           (lambda ()
             (enable-paredit-mode)
             (lispy-mode 1)))
@@ -110,7 +113,8 @@
      (define-key clojure-mode-map (kbd "C-c C-v") 'cider-start-http-server)
      (define-key clojure-mode-map (kbd "C-M-r") 'cider-refresh)
      (define-key clojure-mode-map (kbd "C-c u") 'cider-user-ns)
-     (define-key clojure-mode-map (kbd "C-c C-r") 'cider-clear-repl-buffer*)
+     (define-key clojure-mode-map (kbd "C-c C-SPC") 'cider-clear-repl-buffer*)
+     (define-key cider-repl-mode-map (kbd "C-c C-SPC") 'cider-clear-repl-buffer*)
      (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)
      (define-key clojure-mode-map (kbd "M-.") 'cider-find-var)))
 

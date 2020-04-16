@@ -1,5 +1,6 @@
 ;; Show line numbers
 ;; (global-linum-mode)
+(toggle-scroll-bar -1)
 
 ;; Automatically load paredit when editing a lisp file
 ;; More at http://www.emacswiki.org/emacs/ParEdit
@@ -21,3 +22,5 @@
 ;(set-frame-font "Monospace 10" nil t) ;; me gusta
 (when (window-system)
   (set-frame-font "Fira Code Light 11"))
+
+(load-theme 'spacemacs-dark)

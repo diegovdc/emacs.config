@@ -1,18 +1,26 @@
 ;; Customizations relating to editing a buffer.
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
-
+()
 ;; lispy
 (require 'paredit)
 (require 'lispy)
+
+(defun eval-with-lispy ()
+  (interactive)
+  (print (eq major-mode 'clojure-mode))
+  (if (eq major-mode 'clojure-mode)
+      (cider-eval-defun-at-point)
+    (special-lispy-eval)))
+
 (add-hook 'emacs-lisp-mode-hook
           (lambda ()
             (enable-paredit-mode)
             (lispy-mode 1)
             (lispy-define-key lispy-mode-map "C-a" 'crux-move-beginning-of-line)
+            (lispy-define-key lispy-mode-map "e" 'eval-with-lispy)
             (define-key lispy-mode-map (kbd "C-a") 'crux-move-beginning-of-line)
             (setq lispy-colon-p nil)))
-;; no space before :
 
 ;; disable eshell keybinding
 (global-set-key (kbd "C-x m") nil)

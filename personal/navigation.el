@@ -14,10 +14,10 @@
 
 ;; Turn on recent file mode so that you can more easily switch to
 ;; recently edited files when you first start emacs
-(setq recentf-save-file (concat user-emacs-directory ".recentf"))
+;; (setq recentf-save-file (concat user-emacs-directory ".recentf"))
 (require 'recentf)
 (recentf-mode 1)
-(setq recentf-max-menu-items 40)
+(setq recentf-max-menu-items 25)
 
 
 ;; ido-mode allows you to more easily navigate choices. For example,
@@ -60,8 +60,8 @@
 
 ;; projectile everywhere!
 (projectile-global-mode)
-
-
+(setq projectile-sort-order 'recently-active)
+(setq projectile-completion-system 'ivy)
 
 (require 'find-file-in-project)
 (require 's)

@@ -14,5 +14,4 @@
 (key-chord-define-global "xk" 'lispy-backward)
 
 (require 'cider)
-;; (key-chord-define cider-mode-map "cf" 'cider-eval-defun-at-point)
-(key-chord-define cider-mode-map "vv" 'cider-eval-sexp-at-point)
+(key-chord-define cider-mode-map "cv" 'cider-eval-defun-at-point)
