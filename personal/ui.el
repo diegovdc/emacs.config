@@ -22,5 +22,3 @@
 ;(set-frame-font "Monospace 10" nil t) ;; me gusta
 (when (window-system)
   (set-frame-font "Fira Code Light 11"))
-
-(load-theme 'spacemacs-dark)

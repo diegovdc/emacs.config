@@ -1,4 +1,4 @@
-(setq dark-theme__ 'spacemacs-dark)
+(setq dark-theme__ 'sexy-monochrome)
 (setq light-theme__ 'spacemacs-light)
 (setq prelude-theme dark-theme__)
 
