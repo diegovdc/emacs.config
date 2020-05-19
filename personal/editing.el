@@ -1,7 +1,13 @@
+(setq tab-width 2)
+(setq css-indent-offset 2)
+(defvaralias 'c-basic-offset 'tab-width)
+(defvaralias 'cperl-indent-level 'tab-width)
+
 ;; Customizations relating to editing a buffer.
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
-()
+
+
 ;; lispy
 (require 'paredit)
 (require 'lispy)
