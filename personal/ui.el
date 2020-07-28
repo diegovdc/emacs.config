@@ -19,6 +19,5 @@
 (add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
 
 
-;(set-frame-font "Monospace 10" nil t) ;; me gusta
-(when (window-system)
-  (set-frame-font "Fira Code Light 11"))
+(set-frame-font "Monospace 10" nil t) ;; me gusta
+;; (when (window-system) (set-frame-font "Fira Code Light 11"))

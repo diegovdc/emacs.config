@@ -119,7 +119,7 @@
      (define-key clojure-mode-map (kbd "M-.") 'cider-find-var)))
 
 
-(dolist (mode '(clojure-mode clojurescript-mode cider-mode))
+(dolist (mode '(clojure-mode clojurescript-mode clojurec-mode cider-mode))
   (eval-after-load mode
     (font-lock-add-keywords
      mode '(("(\\(fn\\)[\[[:space:]]"  ; anon funcs 1
