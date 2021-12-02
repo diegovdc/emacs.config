@@ -10,6 +10,7 @@
 
 ;; lispy
 (require 'paredit)
+(setq lispy-compat '(edebug cider))
 (require 'lispy)
 
 (defun eval-with-lispy ()

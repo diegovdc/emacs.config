@@ -8,10 +8,11 @@
           (lambda ()
             (enable-paredit-mode)
             (lispy-mode 1)))
-(add-hook 'cider-repl-mode
+(add-hook 'cider-repl-mode-hook
           (lambda ()
             (enable-paredit-mode)
-            (lispy-mode 1)))
+            ;; (lispy-mode 1)
+            ))
 
 ;; This is useful for working with camel-case tokens, like names of
 ;; Java classes (e.g. JavaClassName)
@@ -64,7 +65,7 @@
 (add-hook 'cider-mode-hook 'eldoc-mode)
 
 ;; go right to the REPL buffer when it's finished connecting
-(setq cider-repl-pop-to-buffer-on-connect t)
+ (setq cider-repl-pop-to-buffer-on-connect t)
 
 ;; When there's a cider error, show its buffer and switch to it
 (setq cider-show-error-buffer t)
@@ -119,7 +120,7 @@
      (define-key clojure-mode-map (kbd "M-.") 'cider-find-var)))
 
 
-(dolist (mode '(clojure-mode clojurescript-mode cider-mode))
+(dolist (mode '(clojure-mode clojurescript-mode clojurec-mode cider-mode))
   (eval-after-load mode
     (font-lock-add-keywords
      mode '(("(\\(fn\\)[\[[:space:]]"  ; anon funcs 1

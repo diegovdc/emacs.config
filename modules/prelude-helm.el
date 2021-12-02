@@ -55,10 +55,10 @@
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
 (global-unset-key (kbd "C-x c"))
 
-(define-key helm-command-map (kbd "o")     'helm-occur)
-(define-key helm-command-map (kbd "g")     'helm-do-grep)
-(define-key helm-command-map (kbd "C-c w") 'helm-wikipedia-suggest)
-(define-key helm-command-map (kbd "SPC")   'helm-all-mark-rings)
+;(define-key helm-command-map (kbd "o")     'helm-occur)
+;(define-key helm-command-map (kbd "g")     'helm-do-grep)
+;(define-key helm-command-map (kbd "C-c w") 'helm-wikipedia-suggest)
+;(define-key helm-command-map (kbd "SPC")   'helm-all-mark-rings)
 
 (push "Press <C-c p h> to navigate a project in Helm." prelude-tips)
 
