@@ -1,4 +1,5 @@
 (key-chord-define-global "jj" nil)
+(key-chord-define-global "lj" nil)
 (key-chord-define-global "m," 'avy-goto-word-1)
 (key-chord-define-global ".," 'avy-goto-char)
 (key-chord-define-global "fd" 'paredit-forward)
@@ -10,8 +11,8 @@
 (key-chord-define-global "xc" 'easy-kill)
 (key-chord-define-global "xv" 'yank)
 (key-chord-define-global "xs" 'save-buffer-always)
-(key-chord-define-global "xj" 'lispy-forward)
-(key-chord-define-global "xk" 'lispy-backward)
+(key-chord-define-global "km" 'lispy-forward)
+(key-chord-define-global "jn" 'lispy-backward)
 
 (require 'cider)
-(key-chord-define cider-mode-map "cv" 'cider-eval-defun-at-point)
+(key-chord-define cider-mode-map "cv" 'cider-pprint-eval-defun-at-point)

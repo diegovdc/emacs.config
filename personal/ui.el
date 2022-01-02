@@ -18,7 +18,6 @@
 (add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
 
-
 (set-frame-font "Monospace 12" nil t) ;; me gusta
 (set-face-attribute 'whitespace-line nil :background nil :foreground "#999999")
 ;; (when (window-system) (set-frame-font "Fira Code Light 11"))

@@ -4,6 +4,7 @@
 (add-to-list 'package-pinned-packages '(cider . "melpa-stable") t)
 
 ;; Enable paredit for Clojure
+
 (add-hook 'clojure-mode-hook
           (lambda ()
             (enable-paredit-mode)
@@ -11,8 +12,15 @@
 (add-hook 'cider-repl-mode-hook
           (lambda ()
             (enable-paredit-mode)
-            ;; (lispy-mode 1)
+            (lispy-mode 1)
             ))
+
+
+;; (setq cider-jack-in-dependencies
+;;       (delete-dups
+;;        (append
+;;         lispy-cider-jack-in-dependencies
+;;         cider-jack-in-dependencies)))
 
 ;; This is useful for working with camel-case tokens, like names of
 ;; Java classes (e.g. JavaClassName)
@@ -62,7 +70,7 @@
 ;;;;
 
 ;; provides minibuffer documentation for the code you're typing into the repl
-(add-hook 'cider-mode-hook 'eldoc-mode)
+;; (add-hook 'cider-mode-hook 'eldoc-mode)
 
 ;; go right to the REPL buffer when it's finished connecting
  (setq cider-repl-pop-to-buffer-on-connect t)
@@ -93,7 +101,7 @@
 ;; these help me out with the way I usually develop web apps
 (defun cider-start-http-server ()
   (interactive)
-  (cider-load-current-buffer)
+  ;; (cider-load-current-buffer)
   (let ((ns (cider-current-ns)))
     (cider-repl-set-ns ns)
     (cider-interactive-eval (format "(println '(def server (%s/start))) (println 'server)" ns))
@@ -111,23 +119,26 @@
 (eval-after-load 'cider
   '(progn
      (define-key clojure-mode-map (kbd "s-<return>")  'cider-eval-defun-at-point)
-     (define-key clojure-mode-map (kbd "C-c C-v") 'cider-start-http-server)
      (define-key clojure-mode-map (kbd "C-M-r") 'cider-refresh)
      (define-key clojure-mode-map (kbd "C-c u") 'cider-user-ns)
      (define-key clojure-mode-map (kbd "C-c C-SPC") 'cider-clear-repl-buffer*)
      (define-key cider-repl-mode-map (kbd "C-c C-SPC") 'cider-clear-repl-buffer*)
      (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)
+     (define-key cider-mode-map (kbd "C-c C-l") nil)
+     (define-key cider-mode-map (kbd "C-c C-l C-r") 'cider-inspect-last-result)
      (define-key clojure-mode-map (kbd "M-.") 'cider-find-var)))
 
+(define-key cider-mode-map (kbd "C-c C-l") nil)
+(define-key cider-mode-map (kbd "C-c C-l C-r") 'cider-inspect-last-result)
 
 (dolist (mode '(clojure-mode clojurescript-mode clojurec-mode cider-mode))
   (eval-after-load mode
     (font-lock-add-keywords
-     mode '(("(\\(fn\\)[\[[:space:]]"  ; anon funcs 1
+     mode '(("(\\(fn\\)[\[[:space:]]"   ; anon funcs 1
              (0 (progn (compose-region (match-beginning 1)
                                        (match-end 1) "λ")
                        nil)))
-            ("\\(#\\)("                ; anon funcs 2
+            ("\\(#\\)("                 ; anon funcs 2
              (0 (progn (compose-region (match-beginning 1)
                                        (match-end 1) "ƒ")
                        nil)))
@@ -148,6 +159,40 @@
   (cljr-add-keybindings-with-prefix "C-c C-m"))
 
 (add-hook 'clojure-mode-hook #'setup-clj-refactor)
+
+
+;; clojure-lsp
+;; (add-hook 'clojure-mode-hook 'lsp)
+;; (add-hook 'clojurescript-mode-hook 'lsp)
+;; (add-hook 'clojurec-mode-hook 'lsp)
+
+(setq gc-cons-threshold (* 100 1024 1024)
+      read-process-output-max (* 1024 1024)
+      treemacs-space-between-root-nodes nil
+      company-minimum-prefix-length 1
+      lsp-enable-on-type-formatting nil
+
+      ;; lsp-enable-indentation nil ; uncomment to use cider indentation instead of lsp
+      ;; lsp-enable-completion-at-point nil ; uncomment to use cider completion instead of lsp
+      )
+
+(setq lsp-lens-enable t)
+(setq lsp-signature-mode nil)
+(setq lsp-ui-mode nil)
+(setq lsp-ui-doc-show-with-cursor nil)
+(setq lsp-headerline-breadcrumb-enable nil)
+(setq lsp-ui-sideline-enable nil)
+(setq lsp-modeline-code-actions-enable nil)
+(setq lsp-signature-render-documentation t)
+(setq lsp-signature-auto-activate t)
+(setq lsp-completion-enable nil)
+(setq lsp-eldoc-enable-hover nil) ; disable lsp-mode showing eldoc during symbol at point
+;; (setq lsp-signature-mode t)
+
+
+
+(define-key lispy-mode-map (kbd "M-.") 'cider-find-var)
+;;(setq lsp-enable-completion-at-point nil) ; use cider completion
 
 
 ;; don't kill the REPL when printing large data structures

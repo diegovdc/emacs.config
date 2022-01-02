@@ -31,3 +31,7 @@ ido.last
 transient/
 cider-history
 ac-comphist.dat
+var/
+.cache/
+.lsp-session*
+
