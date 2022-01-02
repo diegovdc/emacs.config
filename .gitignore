@@ -34,4 +34,5 @@ ac-comphist.dat
 var/
 .cache/
 .lsp-session*
-
+**/#*
+**/.#*
