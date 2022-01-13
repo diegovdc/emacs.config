@@ -8,11 +8,11 @@
 (key-chord-define-global "zx" 'ido-switch-buffer)
 (key-chord-define-global "xd" 'backward-char)
 (key-chord-define-global "cz" 'other-window)
-(key-chord-define-global "xc" 'easy-kill)
 (key-chord-define-global "xv" 'yank)
 (key-chord-define-global "xs" 'save-buffer-always)
 (key-chord-define-global "km" 'lispy-forward)
 (key-chord-define-global "jn" 'lispy-backward)
 
 (require 'cider)
+(key-chord-define cider-mode-map "cx" 'cider-eval-defun-at-point)
 (key-chord-define cider-mode-map "cv" 'cider-pprint-eval-defun-at-point)

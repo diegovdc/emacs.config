@@ -31,14 +31,14 @@
 ;; To use it, add this file to a directory in your load-path, then put
 ;; the following in your Emacs configuration file:
 ;;
-;;   (load-theme 'green-phosphor-2 t)
+;;   (load-theme 'green-phosphor-custom t)
 ;;
 ;;; Code:
 
-(deftheme green-phosphor-2)
+(deftheme green-phosphor-custom)
 
 (custom-theme-set-faces
- 'green-phosphor-2
+ 'green-phosphor-custom
 
  '(default          ((t (:foreground "LimeGreen" :background "#001100" :inherit nil))))
  '(fringe           ((t (:background "#001100"))))
@@ -69,14 +69,14 @@
  '(font-lock-string-face               ((t (:foreground "PaleGreen"))))
  '(font-lock-type-face                 ((t (:foreground "olive drab"))))
  '(font-lock-variable-name-face        ((t (:foreground "dark khaki"))))
- '(font-lock-warning-face              ((t (:foreground "red"))))
+ '(font-lock-warning-face              ((t (:foreground "#ff3302"))))
 
  ;; powerline
- '(powerline-active1   ((t (:foreground "green" :background "#005500"))))
+ '(powerline-active1   ((t (:foreground "green4" :background "#005500"))))
  '(powerline-active2   ((t (:foreground "PaleGreen" :background "#003300"))))
  '(powerline-inactive1 ((t (:foreground "gray70" :background "#002200"))))
  '(powerline-inactive2 ((t (:foreground "gray60" :background "#004400"))))
- '(mode-line           ((t (:foreground "black" :background "green" :box nil))))
+ '(mode-line           ((t (:foreground "black" :background "PaleGreen" :box nil))))
 
  ;; git-gutter
  '(git-gutter+-added    ((t (:foreground "green4" :background "green4"))))
@@ -114,6 +114,6 @@
                   (file-name-as-directory
                    (file-name-directory load-file-name))))
 
-(provide-theme 'green-phosphor-2)
+(provide-theme 'green-phosphor-custom)
 
-;;; green-phosphor-2-theme.el ends here
+;;; green-phosphor-custom-theme.el ends here
