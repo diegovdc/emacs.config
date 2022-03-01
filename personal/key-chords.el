@@ -1,5 +1,6 @@
 (key-chord-define-global "jj" nil)
 (key-chord-define-global "lj" nil)
+(key-chord-define-global "uu" nil)
 (key-chord-define-global "m," 'avy-goto-word-1)
 (key-chord-define-global ".," 'avy-goto-char)
 (key-chord-define-global "fd" 'paredit-forward)
