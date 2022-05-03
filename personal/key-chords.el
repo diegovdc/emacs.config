@@ -1,3 +1,4 @@
+(key-chord-define-global "qq" 'top-level)  ; https://www.reddit.com/r/emacs/comments/4d8gvt/how_do_i_automatically_close_the_minibuffer_after/d1ovv6g/
 (key-chord-define-global "jj" nil)
 (key-chord-define-global "lj" nil)
 (key-chord-define-global "uu" nil)
@@ -13,7 +14,13 @@
 (key-chord-define-global "xs" 'save-buffer-always)
 (key-chord-define-global "km" 'lispy-forward)
 (key-chord-define-global "jn" 'lispy-backward)
-
 (require 'cider)
+
 (key-chord-define cider-mode-map "cx" 'cider-eval-defun-at-point)
 (key-chord-define cider-mode-map "cv" 'cider-pprint-eval-defun-at-point)
+(defun enlarge-window-horizontally-default ()
+  (interactive)
+  (enlarge-window-horizontally 30))
+
+
+(key-chord-define-global "4w" 'enlarge-window-horizontally-default)

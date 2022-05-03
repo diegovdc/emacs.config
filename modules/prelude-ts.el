@@ -49,7 +49,8 @@
   (add-hook 'before-save-hook
             (lambda ()
               (when prelude-format-on-save
-                (tide-format-before-save))))
+                ;; (tide-format-before-save)
+                )))
 
   (setq prelude-ts-mode-hook 'prelude-ts-mode-defaults)
 

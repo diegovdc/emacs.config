@@ -1,4 +1,4 @@
-(setq dark-theme__ 'green-phosphor-custom)
+(setq dark-theme__ 'spacemacs-dark)
 
 (setq light-theme__ 'spacemacs-light)
 (setq prelude-theme dark-theme__)

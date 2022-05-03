@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: reframe dispatch
+# key: rfd
+# --
+(rf/dispatch [${1:key}])

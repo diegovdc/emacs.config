@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: read-path db
+# key: rpdb
+# --
+(-> system :rest-api/fe-read-path :fe-read-path/db
+$0)

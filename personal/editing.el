@@ -1,6 +1,6 @@
 (setq tab-width 2)
 (setq css-indent-offset 2)
-(defvaralias 'c-basic-offset 'tab-width)
+;; (defvaralias 'c-basic-offset 'tab-width)
 (defvaralias 'cperl-indent-level 'tab-width)
 
 ;; Customizations relating to editing a buffer.
@@ -36,6 +36,7 @@
 ;; Key binding to use "hippie expand" for text autocompletion
 ;; http://www.emacswiki.org/emacs/HippieExpand
 (global-set-key (kbd "M-/") 'hippie-expand)
+
 
 ;; Lisp-friendly hippie expand
 (setq hippie-expand-try-functions-list
@@ -124,6 +125,10 @@
 
 ;; switch buffer
 (global-set-key (kbd "s-b") 'ido-switch-buffer)
+
+;; transpose-buffers
+(global-set-key (kbd "C-x C-z") 'transpose-buffers)
+(define-key projectile-mode-map (kbd "C-x C-z") 'transpose-buffers)
 
 ;; paredit
 (require 'paredit)
@@ -289,8 +294,10 @@ With negative N, comment out original line and use the absolute value."
 (global-set-key (kbd "C-x C-v") 'yank)
 
 ;; resize buffers horizontally
+(global-set-key (kbd "H-+") 'enlarge-window-horizontally)
 (global-set-key (kbd "<kp-add>") 'enlarge-window-horizontally)
 (global-set-key (kbd "<kp-subtract>") 'shrink-window-horizontally)
+(global-set-key (kbd "H-_") 'shrink-window-horizontally)
 
 ;;; backward delete
 (global-set-key (kbd "C-r") 'paredit-backward-delete)

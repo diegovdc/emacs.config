@@ -77,7 +77,7 @@
 ;; Modules for a few very common programming languages
 ;; are enabled by default.
 
-(require 'prelude-c)
+;; (require 'prelude-c)
 (require 'prelude-clojure)
 ;; (require 'prelude-coffee)
 ;; (require 'prelude-common-lisp)
@@ -110,7 +110,8 @@
 (require 'prelude-yaml)
 
 ;;; Misc
-(require 'prelude-erc) ;; A popular Emacs IRC client (useful if you're still into Freenode)
+;; (require 'prelude-erc)
+;; A popular Emacs IRC client (useful if you're still into Freenode)
 
 (provide 'prelude-modules)
 ;;; prelude-modules.el ends here

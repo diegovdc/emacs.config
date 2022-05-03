@@ -7,5 +7,6 @@
             (next-win (window-buffer (funcall selector))))
         (set-window-buffer (selected-window) next-win)
         (set-window-buffer (funcall selector) this-win)
-        (select-window (funcall selector)))
+        ;; (select-window (funcall selector))
+        )
       (setq arg (if (plusp arg) (1- arg) (1+ arg))))))

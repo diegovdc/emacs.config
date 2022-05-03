@@ -1,5 +1,6 @@
 ;; Show line numbers
 ;; (global-linum-mode)
+(global-display-line-numbers-mode -1)
 (toggle-scroll-bar -1)
 
 ;; Automatically load paredit when editing a lisp file
@@ -18,6 +19,19 @@
 (add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
 
-(set-frame-font "Monospace 12" nil t) ;; me gusta
-(set-face-attribute 'whitespace-line nil :background nil :foreground "#999999")
+(set-frame-font "Monospace 18" nil t);; me gusta
+(set-face-attribute 'whitespace-line nil :background nil :foreground "#777777")
 ;; (when (window-system) (set-frame-font "Fira Code Light 11"))
+
+
+
+;; doom modeline
+(require 'doom-modeline)
+(add-hook 'after-init-hook #'doom-modeline-mode)
+
+(setq doom-modeline-height 1)
+(set-face-attribute 'mode-line nil :family "Noto Sans" :height 160)
+(set-face-attribute 'mode-line-inactive nil :family "Noto Sans" :height 100)
+(setq doom-modeline-buffer-file-name-style 'truncate-with-project)
+(setq doom-modeline-buffer-encoding nil)
+(setq doom-modeline-vcs-max-length 30)

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: require my-id
+# key: myid
+# --
+(require '[dev.diegov :refer [my-id]])

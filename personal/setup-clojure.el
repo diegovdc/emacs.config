@@ -35,9 +35,10 @@
 
 ;; A little more syntax highlighting
 (require 'clojure-mode-extra-font-locking)
-(require 'flycheck-joker)
+;; (require 'flycheck-joker)
+;; (add-hook 'clojure-mode-hook 'flycheck-mode)
 
-(add-hook 'clojure-mode-hook 'flycheck-mode)
+(require 'flycheck-clj-kondo)
 
 ;; syntax hilighting for midje
 (add-hook 'clojure-mode-hook
@@ -151,6 +152,9 @@
 
 ;; clj-refactor
 (require 'clj-refactor)
+;; (require 'lsp)
+;; (require 'lsp-ui)
+
 
 (defun setup-clj-refactor ()
   (clj-refactor-mode 1)
@@ -171,27 +175,45 @@
       treemacs-space-between-root-nodes nil
       company-minimum-prefix-length 1
       lsp-enable-on-type-formatting nil
-
+      lsp-log-io t
+      lsp-enable-indentation t
       ;; lsp-enable-indentation nil ; uncomment to use cider indentation instead of lsp
       ;; lsp-enable-completion-at-point nil ; uncomment to use cider completion instead of lsp
+
       )
 
 (setq lsp-lens-enable t)
+(setq lsp-lens-enable t)
+(setq lsp-signature-mode nil)
 (setq lsp-signature-mode nil)
 (setq lsp-ui-mode nil)
+(setq lsp-ui-mode nil)
+(setq lsp-ui-doc-show-with-cursor nil)
 (setq lsp-ui-doc-show-with-cursor nil)
 (setq lsp-headerline-breadcrumb-enable nil)
-(setq lsp-ui-sideline-enable nil)
+(setq lsp-ui-sideline-enable t)
 (setq lsp-modeline-code-actions-enable nil)
-(setq lsp-signature-render-documentation t)
-(setq lsp-signature-auto-activate t)
+(setq lsp-signature-render-documentation nil)
+(setq lsp-signature-auto-activate nil)
 (setq lsp-completion-enable nil)
-(setq lsp-eldoc-enable-hover nil) ; disable lsp-mode showing eldoc during symbol at point
-;; (setq lsp-signature-mode t)
+(setq lsp-ui-doc-enable nil)
+(setq cider-eldoc-display-for-symbol-at-point nil)
+                                        ; disable cider showing eldoc during symbol at point
 
+(setq lsp-completion-enable nil)
+                                        ; use cider completion
+
+(setq lsp-eldoc-enable-hover t)
+                                        ; disable lsp-mode showing eldoc during symbol at point
+(setq lsp-signature-mode t)
+(setq cider-eldoc-display-for-symbol-at-point nil)
+
+(setq cider-eldoc-display-context-dependent-info nil)
 
 
 (define-key lispy-mode-map (kbd "M-.") 'cider-find-var)
+(define-key lispy-mode-map (kbd "p") nil)
+(define-key lispy-mode-map (kbd "g") nil)
 ;;(setq lsp-enable-completion-at-point nil) ; use cider completion
 
 

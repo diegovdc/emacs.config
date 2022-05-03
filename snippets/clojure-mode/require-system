@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: require api system
+# key: reqsys
+# --
+(require '[org.honestdeed.rest-api.server :refer [system]])
+  $0

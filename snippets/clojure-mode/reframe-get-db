@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: reframe get from db
+# key: rfgdb
+# --
+(-> @re-frame.db/app-db $0)

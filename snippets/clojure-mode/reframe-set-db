@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: reframe set on db
+# key: rfsdb
+# --
+(swap! re-frame.db/app-db ${1:assoc} $2)
