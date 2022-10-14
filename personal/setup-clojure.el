@@ -166,8 +166,8 @@
 
 
 ;; clojure-lsp
-;; (add-hook 'clojure-mode-hook 'lsp)
-;; (add-hook 'clojurescript-mode-hook 'lsp)
+(add-hook 'clojure-mode-hook 'lsp)
+(add-hook 'clojurescript-mode-hook 'lsp)
 ;; (add-hook 'clojurec-mode-hook 'lsp)
 
 (setq gc-cons-threshold (* 100 1024 1024)
